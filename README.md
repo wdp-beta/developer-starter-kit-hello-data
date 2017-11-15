@@ -1,6 +1,5 @@
 ---
 title: This is my title
-layout: post
 ---
 
 # Watson Data Platform - "Hello Data!" starter kit
