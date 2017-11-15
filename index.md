@@ -1,10 +1,11 @@
 ---
 layout: page
-title: simple site
-tagline: Easy websites with GitHub Pages
-description: Minimal tutorial on making a simple website with GitHub Pages
+title: Watson Data Platform
+tagline: Developer Starter Kits
+description: Simple projects that get you started
 ---
-# Watson Data Platform - "Hello Data!" starter kit
+# Watson Data Platform Starter Kit
+## Hello Data!
 
 This Node.js starter kit application illustrates how to collect data asset information from a Watson Data Platform project and how to access a Cloudant database, a DB2 Warehouse on Cloud database and a data file that's stored in IBM Cloud Object Storage using that information.
 
