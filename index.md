@@ -1,9 +1,3 @@
----
-layout: page
-title: Watson Data Platform
-tagline: Developer Starter Kits
-description: Simple projects that get you started
----
 # Watson Data Platform Starter Kit
 ## Hello Data!
 
