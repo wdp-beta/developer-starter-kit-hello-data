@@ -1,3 +1,8 @@
+---
+title: This is my title
+layout: post
+---
+
 # Watson Data Platform - "Hello Data!" starter kit
 
 This Node.js starter kit application illustrates how to collect data asset information from a Watson Data Platform project and how to access a Cloudant database, a DB2 Warehouse on Cloud database and a data file that's stored in IBM Cloud Object Storage using that information.
