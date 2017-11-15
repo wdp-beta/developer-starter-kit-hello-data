@@ -1,6 +1,6 @@
 ---
-title: 
-layout: 
+title: WDP
+layout: default
 ---
 
 # Watson Data Platform - "Hello Data!" starter kit
