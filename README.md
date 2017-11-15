@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Watson Data Platform - "Hello Data!" starter kit
 
 This Node.js starter kit application illustrates how to collect data asset information from a Watson Data Platform project and how to access a Cloudant database, a DB2 Warehouse on Cloud database and a data file that's stored in IBM Cloud Object Storage using that information.
@@ -15,3 +16,7 @@ After the application has been deployed to yor target environment you can option
    * hello-data Cloudant data access: to enable debug output only for this module set environment variable `DEBUG` to `hello-data:cloudant_sample`
    * hello-data Db2 Warehouse on Cloud data access: to enable debug output only for this module set environment variable `DEBUG` to `hello-data:db2wh_sample`
    * hello-data IBM Cloud Object Storage data access: to enable debug output only for this module set environment variable `DEBUG` to `hello-data:cos_sample`
+=======
+# developer-starter-kit-hello-data
+Test to publish
+>>>>>>> abad79b68346ece6de10b15655eff85d43ef8371
