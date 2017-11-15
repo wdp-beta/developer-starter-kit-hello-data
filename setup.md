@@ -7,11 +7,11 @@ description: Simple projects that get you started
 # Watson Data Platform Starter Kit
 ## Hello Data!
 
-The assumption of the following instructions is that you do not have any previously deployed elements of Watson Data Platform.
-
-If you or your organization has already provisioned Watson Data Platform services and you have access to active projects and data sources, you may be able to use this starter kit application without these prerequisite steps. 
-
 The following steps are prerequisites before using the starter kit applicaiton. Performing them will also give you an understanding of how the WDP experiences represent the structures you will be using the APIs to interact with.
+
+The assumption is that you do not have any previously deployed elements of Watson Data Platform. If you or your organization has already provisioned Watson Data Platform services and you have access to active projects and data sources, you may be able to use this starter kit application without these prerequisite steps. 
+
+
 
 1. <a href="#stepone">Prepare your data sources</a>
 2. <a href="#steptwo">Provision the WDP experiences</a>
