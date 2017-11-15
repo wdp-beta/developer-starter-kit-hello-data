@@ -22,8 +22,6 @@ The assumption is that you do not have any previously deployed elements of Watso
 <p>&nbsp;</p>
 <a name="stepone"></a>
 
-***
-
 **Step 1: Prepare your data sources**
 
 1. Cloudant:
@@ -48,7 +46,6 @@ The assumption is that you do not have any previously deployed elements of Watso
 <p>&nbsp;</p>
 
 <a name="steptwo"></a>
-***
 
 **Step 2: Provision the WDP experiences**
 1. Data Science Experience
@@ -64,7 +61,6 @@ The assumption is that you do not have any previously deployed elements of Watso
     2. From the menu, select **Add Other Apps** and add **Data Catalog**. If this entry does not appear, you already have it deployed.
 <p>&nbsp;</p>
 <a name="stepthree"></a>
-***
 
 **Step 3: Create a project**
     
@@ -89,7 +85,6 @@ From the Data Science Experience application:
             3. From the drop-down menu, select the new Cloud Object Storage (Beta) instance you just provisioned.
 <p>&nbsp;</p>
 <a name="stepfour"></a>
-***
 
 **Step 4: Add your data sources to the project**
 
@@ -117,7 +112,3 @@ In this step you will populate the project with the data needed to use this star
         - A connection to your Cloudant database
         - A connection to your Db2 Warehouse on Cloud database
 
-<p>&nbsp;</p>
-<a name="stepsix"></a>
-
-***
