@@ -1,5 +1,4 @@
-# Watson Data Platform Starter Kit
-## Hello Data!
+# Hello Data!
 
 As a developer using the Watson Data Platform you will frequently interacting with team members using Data Science Experience, Data Catalog and Data Refinery user experiences. You may be referencing projects, catalogs and assets those people are working with.
 

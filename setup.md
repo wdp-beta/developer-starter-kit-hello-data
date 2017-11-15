@@ -1,5 +1,4 @@
-# Watson Data Platform Starter Kit
-## Hello Data!
+# Hello Data!
 
 The following steps are prerequisites before using the starter kit applicaiton. Performing them will also give you an understanding of how the WDP experiences represent the structures you will be using the APIs to interact with.
 
