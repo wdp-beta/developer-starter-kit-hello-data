@@ -28,14 +28,14 @@ The assumption is that you do not have any previously deployed elements of Watso
 
     Create an empty database in the new instance created in your starter kit project
     1. From the service list in your starter kit project, select **Open Dashboard** from the **Actions** menu of the **Cloudant NoSQL DB** entry
-    2. From the next page select the Launch action to open the Cloudant web console.
+    2. From the next page select the Launch action to open the web console.
     3. In the new browser window, click the *Databases* tab in the left navigation, and create a database using a name or your choosing.
 
 2. Db2 Warehouse on Cloud
 
     This database does not require additional setup after the starter kit created the instance for you. If you wish, you can manage it from the service list in your starter kit project. 
     1. Select **Open Dashboard** from the **Actions** menu of the **DB2 Warehouse on Cloud** entry.
-    2. From the next page select the Launch action to open the Cloudant web console.
+    2. From the next page select the Launch action to open the web console.
 
 
 3. Local data file
