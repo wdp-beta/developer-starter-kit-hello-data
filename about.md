@@ -14,8 +14,32 @@ It comprises of two components:
 **Note**: Throughout this document you will find references to source code files, such as `/server/lib/client.js`. The specified location is relative to the directory where you extracted the downloaded source code or the github repository into which the starter code was pushed by the devops pipeline.
 
 
+### Hello Data! back-end router
+
+To keep things simple, the router provides three state-less endpoints for the web UI:
+ * list Watson Data Platform projects
+ * list Watson Data Platform project assets
+ * access Watson Data Platform data assets
+
+Each endpoint invokes one or more Watson Data Platform APIs using the wrapper library described in the next section.
+
+#### Accessing the Watson Data Platform API
+
+Each API endpoint requires an API token, which you mint by calling an authorization endpoint, providing an API key. (TODO links)
+Endpoints return only information that is visible to the specified API key.
+
+#### Listing Watson Data Platform projects
+
+To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluemix.net/v2/projects/docs/swagger/#/Projects/getProjects) endpoint. The JSON response contains for each project two pieces of key information: the project name (`entity.name`) and a unique internal project id (`metadata.guid`). Most API endpoints that operate in the context of a project (such as the project API or the asset API) require this project id as an input. Just like all other list-ing endpoints, the project list endpoint supports pagination and filtering. (TODO links to appropriate topic)
+
+#### Listing Watson Data Platform project assets 
+
+#### Accessing Watson Data Platform data assets 
+
 ### Shallow Watson Data Platform API Wrapper
-The Watson Data Platform provides a [REST API](https://developer.ibm.com/api/view/id-1084:title-Watson_Data_Platform_Core_Services) that applications can use consume its services. This application utilizes a purpose build shallow wrapper library (`/server/lib/client.js`) to communicate with this API.
+The Watson Data Platform provides a [REST API](https://developer.ibm.com/api/view/id-1084:title-Watson_Data_Platform_Core_Services) that applications can use consume its services. This application utilizes a purpose build shallow wrapper library (`/server/lib/client.js`) to communicate with this API. Once an official Node.js SDK is released this wrapper library is obsolete.
+
+The wrapper library encapsulates the HTTP request/response processing (including authentication) but does not contain any business logic.
 
 ### IBM Cloudant data access
 
