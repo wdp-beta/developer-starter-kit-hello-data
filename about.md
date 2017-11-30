@@ -41,6 +41,8 @@ Endpoints return only information that is visible to the specified API key. The 
 
 To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluemix.net/v2/projects/docs/swagger/#/Projects/getProjects) endpoint. The JSON response contains for each project two pieces of key information: the project name (`entity.name`) and a unique internal project id (`metadata.guid`). Most API endpoints that operate in the context of a project (such as the project API or the asset API) require this project id as an input. Just like all other list-ing endpoints, the project list endpoint supports pagination and filtering. (TODO links to appropriate topic)
 
+> For illustrative purposes, the Hello Data! web UI displays the raw JSON response.
+
 #### Listing Watson Data Platform project assets 
 
 TODO
