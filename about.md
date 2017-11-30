@@ -1,3 +1,8 @@
+***
+ TODO: 
+  * replace all stage1 URLs with public URLS
+***
+
 # About the Hello Data! application
 
 The Starter Kit application illustrates how to navigate the project and asset structure, collect data asset information and then shows how to use that information to access a NoSQL database (IBM Cloudant), a relational database (DB2 Warehouse on Cloud) and a data file stored on the Cloud (IBM Cloud Object Storage.)
@@ -23,9 +28,13 @@ To keep things simple, the router provides three state-less endpoints for the we
 
 Each endpoint invokes one or more Watson Data Platform APIs using the wrapper library described in the next section.
 
-#### Accessing the Watson Data Platform API
+#### Accessing the Watson Data Platform API 
 
-Each API endpoint requires an API token, which you mint by calling an authorization endpoint, providing an API key. (TODO links)
+(TODO links)
+Each API endpoint requires an API token, which you mint by calling an authorization endpoint, providing an API key. API tokens expire after 3600 seconds.
+
+ > Note: At the time of writing the authentication API returns HTTP status code `400 (Bad Request)` and not `403 (Forbidden)` if an invalid API key was provided.
+ 
 Endpoints return only information that is visible to the specified API key.
 
 #### Listing Watson Data Platform projects
@@ -34,7 +43,11 @@ To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluem
 
 #### Listing Watson Data Platform project assets 
 
+TODO
+
 #### Accessing Watson Data Platform data assets 
+
+TODO
 
 ### Shallow Watson Data Platform API Wrapper
 The Watson Data Platform provides a [REST API](https://developer.ibm.com/api/view/id-1084:title-Watson_Data_Platform_Core_Services) that applications can use consume its services. This application utilizes a purpose build shallow wrapper library (`/server/lib/client.js`) to communicate with this API. Once an official Node.js SDK is released this wrapper library is obsolete.
