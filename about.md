@@ -1,6 +1,6 @@
 ***
  TODO: 
-  * replace all stage1 URLs with public URLS
+  * replace all stage1 URLs with public URLs
 ***
 
 # About the Hello Data! application
@@ -19,23 +19,23 @@ It comprises of two components:
 **Note**: Throughout this document you will find references to source code files, such as `/server/lib/client.js`. The specified location is relative to the directory where you extracted the downloaded source code or the github repository into which the starter code was pushed by the devops pipeline.
 
 
-### Hello Data! back-end router
+### Hello Data! back-end 
 
-To keep things simple, the router provides three state-less endpoints for the web UI:
+To keep things simple, the back-end (`/server/routers/hello-data.js`) provides three state-less endpoints for the web UI:
  * list Watson Data Platform projects
  * list Watson Data Platform project assets
  * access Watson Data Platform data assets
 
-Each endpoint invokes one or more Watson Data Platform APIs using the wrapper library described in the next section.
+Each endpoint invokes one or more Watson Data Platform APIs using the wrapper library described in a later section.
 
 #### Accessing the Watson Data Platform API 
 
 (TODO links)
-Each API endpoint requires an API token, which you mint by calling an authorization endpoint, providing an API key. API tokens expire after 3600 seconds.
+Each API endpoint requires an API token, which you [mint by calling an authorization endpoint](https://www.ibm.com), providing an API key. API tokens expire after 3600 seconds.
 
  > Note: At the time of writing the authentication API returns HTTP status code `400 (Bad Request)` and not `403 (Forbidden)` if an invalid API key was provided.
  
-Endpoints return only information that is visible to the specified API key.
+Endpoints return only information that is visible to the specified API key. The Swagger specification for all endpoints can be found [here](http://www.ibm.com).
 
 #### Listing Watson Data Platform projects
 
