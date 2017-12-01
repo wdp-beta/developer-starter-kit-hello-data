@@ -11,4 +11,4 @@ The application uses Node.js to navigate the project and asset structure, collec
 ## Deployment
 To deploy this Watson Data Platform Starter Kit follow the instructions on [the Watson Data Platform Starter Kit page](https://console.stage1.bluemix.net/developer/dataplatform/starter-kits).
 
-The Starter Kit and its instuctions will help you set up a Watson Data Platform project if you do not have one, configure instances of Cloudant and DB2 Warehouse on Cloud and run the Node.js application either in the IBM cloud with continuous delivery enabled or locally on your workstation. 
+The Starter Kit and its instuctions will help you set up a Watson Data Platform project if you do not have one, configure instances of Cloudant and DB2 Warehouse on Cloud and run the Node.js application either in the IBM Cloud with continuous delivery enabled or locally on your workstation. 
