@@ -1,6 +1,8 @@
 ***
  TODO: 
-  * replace all stage1 URLs with public URLs (e.g. for direct links to Swagger specs)
+  * replace all stage1 URLs with public URLs 
+   * swagger specs
+   * starter kit home page (currently points to stage1)
 ***
 
 # About the Hello Data! application
@@ -74,7 +76,7 @@ Access to IBM Cloud Object Storage is implemented in `/server/lib/data_access_he
 
 
 ## Running the application
-To deploy and run this Watson Data Platform Starter Kit follow the instructions on the [Watson Data Platform Starter Kit page](https://dev-console.stage1.bluemix.net/developer/dataplatform/starter-kits).
+To deploy and run this Watson Data Platform Starter Kit follow the instructions on the [Watson Data Platform Starter Kit page](https://console.stage1.bluemix.net/developer/dataplatform/starter-kits).
 
 The Starter Kit and its instructions will help you set up a Watson Data Platform project if you do not have one, configure instances of Cloudant and Db2 Warehouse on Cloud and run the Node.js application either in the IBM Cloud with continuous delivery enabled or locally on your workstation. 
 
