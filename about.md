@@ -1,6 +1,6 @@
 ***
  TODO: 
-  * replace all stage1 URLs with public URLs
+  * replace all stage1 URLs with public URLs (e.g. for direct links to Swagger specs)
 ***
 
 # About the Hello Data! application
@@ -26,16 +26,16 @@ To keep things simple, the back-end (`/server/routers/hello-data.js`) provides t
  * list Watson Data Platform project assets
  * access Watson Data Platform data assets
 
-Each endpoint invokes one or more Watson Data Platform APIs using the wrapper library described in a later section.
+Each endpoint invokes one or more Watson Data Platform API endpoints using the wrapper library described in a later section.
 
 #### Accessing the Watson Data Platform API 
 
 (TODO links)
-Each API endpoint requires an API token, which you [mint by calling an authorization endpoint](https://www.ibm.com), providing an API key. API tokens expire after 3600 seconds.
+Each API endpoint call requires an API token, which you mint by calling an authorization endpoint, providing your API key. API tokens expire after 3600 seconds.
 
  > Note: At the time of writing the authentication API returns HTTP status code `400 (Bad Request)` and not `403 (Forbidden)` if an invalid API key was provided.
  
-Endpoints return only information that is visible to the specified API key. The Swagger specification for all endpoints can be found [here](http://www.ibm.com).
+Watson Data Platform API endpoints return only information that is visible to the specified API key. The Swagger specification for all endpoints can be found [here](http://www.ibm.com).
 
 #### Listing Watson Data Platform projects
 
@@ -45,7 +45,7 @@ To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluem
 
 #### Listing Watson Data Platform project assets 
 
-TODO
+To retrieve a project's asset list, call the [`POST /v2/asset_types/asset/search`](https://catalogs-ys1-dev.stage1.mybluemix.net/v2/explorer/#!/Asset_Types/searchNewAssetV2) endpoint, passing the project id as parameter. The request body must contain a JSON string  expressing a Lucene query, such as `{query: "*:*"}`.
 
 #### Accessing Watson Data Platform data assets 
 
