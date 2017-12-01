@@ -5,7 +5,7 @@
 
 # About the Hello Data! application
 
-The Starter Kit application illustrates how to navigate the project and asset structure, collect data asset information and then shows how to use that information to access a NoSQL database (IBM Cloudant), a relational database (DB2 Warehouse on Cloud) and a data file stored on the Cloud (IBM Cloud Object Storage.)
+The Starter Kit application illustrates how to navigate the project and asset structure, collect data asset information and then shows how to use that information to access a NoSQL database (IBM Cloudant), a relational database (Db2 Warehouse on Cloud) and a data file stored on the Cloud (IBM Cloud Object Storage.)
 
 It comprises of two components:
  * A simple HTML/Javascript web UI that collects user input and communicates with the back-end.
@@ -41,11 +41,15 @@ Watson Data Platform API endpoints return only information that is visible to th
 
 To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluemix.net/v2/projects/docs/swagger/#/Projects/getProjects) endpoint. The JSON response contains for each project two pieces of key information: the project name (`entity.name`) and a unique internal project id (`metadata.guid`). Most API endpoints that operate in the context of a project (such as the project API or the asset API) require this project id as an input. Just like all other list-ing endpoints, the project list endpoint supports pagination and filtering. (TODO links to appropriate topic)
 
-> For illustrative purposes, the Hello Data! web UI displays the raw JSON response.
+> For illustrative purposes, the Hello Data! web UI displays the raw JSON response for the API token the user entered.
 
 #### Listing Watson Data Platform project assets 
 
-To retrieve a project's asset list, call the [`POST /v2/asset_types/asset/search`](https://catalogs-ys1-dev.stage1.mybluemix.net/v2/explorer/#!/Asset_Types/searchNewAssetV2) endpoint, passing the project id as parameter. The request body must contain a JSON string  expressing a Lucene query, such as `{query: "*:*"}`.
+To retrieve a project's asset list, call the [`POST /v2/asset_types/asset/search`](https://catalogs-ys1-dev.stage1.mybluemix.net/v2/explorer/#!/Asset_Types/searchNewAssetV2) endpoint, passing the project id as parameter. The request body must contain a JSON string  expressing a Lucene query, such as `{query: "*:*"}`, which should be appropriate for most requests.
+
+The JSON response contains asset metadata, such as the asset name (`metadata.name`), asset type (`metadata.asset_type`) and unique asset id (`metadata.asset_id`). Call the appropriate asset type specific API endpoints (see next section) with the desired asset id to collect the information needed to access the data asset.
+
+> For illustrative purposes, the Hello Data! web UI displays the raw JSON response for the API token the user entered.
 
 #### Accessing Watson Data Platform data assets 
 
@@ -62,7 +66,7 @@ Access to Cloudant is implemented in `/server/lib/data_access_helpers/cloudant_d
 
 ### IBM Db2 Warehouse on Cloud data access
 
-Access to IBM Db2 Warehouse on Cloud is implemented in `/server/lib/data_access_helpers/db2wh_data_access_sample.js`. The sample code uses the official [ibm_db](https://www.npmjs.com/package/ibm_db) library. The code uses the data assets' connection credentials to connect to the database instance and counts the number of user tables.
+Access to IBM Db2 Warehouse on Cloud is implemented in `/server/lib/data_access_helpers/db2wh_data_access_sample.js`. The sample code uses the official [ibm_db](https://www.npmjs.com/package/ibm_db) library. The code uses the data assets' connection credentials to connect to the  instance and counts the number of user tables.
 
 ### IBM Cloud Object storage data access
 
@@ -72,7 +76,7 @@ Access to IBM Cloud Object Storage is implemented in `/server/lib/data_access_he
 ## Deployment
 To deploy this Watson Data Platform Starter Kit follow the instructions on [the Watson Data Platform Starter Kit page](https://dev-console.stage1.bluemix.net/developer/dataplatform/starter-kits)
 
-The Starter Kit and its instuctions will help you set up a Watson Data Platform project if you do not have one, configure instances of Cloudant and DB2 Warehouse on Cloud and run the node.js application either in the IBM cloud with continuous delivery enabled or locally on your workstation. 
+The Starter Kit and its instuctions will help you set up a Watson Data Platform project if you do not have one, configure instances of Cloudant and Db2 Warehouse on Cloud and run the node.js application either in the IBM cloud with continuous delivery enabled or locally on your workstation. 
 
 ### Debugging 
 After the application has been deployed to yor target environment you can optionally enable debugging to learn more about the interactions between the modules and the [Watson Data Platform API](https://wdp-api-registry.mybluemix.net/api-explorer/) and the data services.
