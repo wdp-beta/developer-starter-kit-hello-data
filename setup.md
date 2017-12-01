@@ -94,6 +94,5 @@ In this step you will populate the project with the data needed to use this star
     3. If it was not already open the **Files** panel on the right side of the screen will open.
     4. Use browse or drag-and-drop to add the .csv file you downloaded earlier to the project.
 
-<p>&nbsp;</p>
-You should now see three data assets in your project and can now explore them using the [IBM](http://www.ibm.com) 
+You should now see three data assets in your project and can now explore them using the Hello Data! starter kit application.
 
