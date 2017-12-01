@@ -95,5 +95,5 @@ In this step you will populate the project with the data needed to use this star
     4. Use browse or drag-and-drop to add the .csv file you downloaded earlier to the project.
 
 <p>&nbsp;</p>
-You should now see three data assets in your project and can now explore them using the [starter kit application](https://wdp-beta.github.io/developer-starter-kit-hello-data/about). 
+You should now see three data assets in your project and can now explore them using the [IBM](http://www.ibm.com) 
 
