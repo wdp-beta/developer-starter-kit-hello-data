@@ -1,8 +1,8 @@
 ***
  TODO: 
   * replace all stage1 URLs with public URLs 
-   * swagger specs
-   * starter kit home page (currently points to stage1)
+  * starter kit home page (currently points to stage1)
+  * add link to auth token topic
 ***
 
 # About the Hello Data! application
@@ -15,11 +15,9 @@ It comprises of two components:
 
 ![overview](img/skit_app_structure.png)
 
-
 ## Implementation overview
 
 **Note**: Throughout this document you will find references to source code files, such as `/server/lib/client.js`. The specified location is relative to the directory where you extracted the downloaded source code or the github repository into which the starter code was pushed by the devops pipeline.
-
 
 ### Hello Data! back-end 
 
@@ -28,26 +26,39 @@ To keep things simple, the back-end (`/server/routers/hello-data.js`) provides t
  * list Watson Data Platform project assets
  * access Watson Data Platform data assets
 
-Each endpoint invokes one or more Watson Data Platform API endpoints using the wrapper library described in a later section.
+Each endpoint invokes one or more Watson Data Platform API endpoints using the wrapper library.
+
+### Shallow Watson Data Platform API Wrapper
+The Watson Data Platform provides a [REST API](https://developer.ibm.com/api/view/id-1084:title-Watson_Data_Platform_Core_Services) that applications can use consume its services. 
+ > Note: The API base URL is `https://api.dataplatform.ibm.com`.
+
+This application utilizes an unofficial shallow wrapper library (`/server/lib/client.js`), which encapsulates the HTTP request/response processing (including authentication).
+ > Note: This purpose-built library is limited in scope and was only created to simplify the code containing the Hello Data! business logic.
 
 #### Accessing the Watson Data Platform API 
 
 (TODO links)
-Each API endpoint call requires an API token, which you mint by calling an authorization endpoint, providing your API key. API tokens expire after 3600 seconds.
+Each API endpoint call requires an API token, which you mint by calling an authorization endpoint, providing your IBM Cloud API key. API tokens expire after 3600 seconds.
 
  > Note: At the time of writing the authentication API returns HTTP status code `400 (Bad Request)` and not `403 (Forbidden)` if an invalid API key was provided.
  
-Watson Data Platform API endpoints return only information that is visible to the specified API key. The Swagger specification for all endpoints can be found [here](http://www.ibm.com).
+Watson Data Platform API endpoints return only information that is accessible to the specified API key. Follow [this link](https://wdp-api-registry.mybluemix.net/api-explorer/) to access the Swagger specification.
 
 #### Listing Watson Data Platform projects
 
-To list projects, call the [`GET /v2/projects`](https://apsx-api.stage1.ng.bluemix.net/v2/projects/docs/swagger/#/Projects/getProjects) endpoint. The JSON response contains for each project two pieces of key information: the project name (`entity.name`) and a unique internal project id (`metadata.guid`). Most API endpoints that operate in the context of a project (such as the project API or the asset API) require this project id as an input. Just like all other list-ing endpoints, the project list endpoint supports pagination and filtering. (TODO links to appropriate topic)
+To list projects, call the `GET /v2/projects` endpoint. The JSON response contains for each project two pieces of key information: the project name (`entity.name`) and a unique internal project id (`metadata.guid`). Most API endpoints that operate in the context of a project (such as the project API or the asset API) require this project id as an input. Like all other list-ing endpoints, the project list endpoint supports pagination and filtering. 
 
-> For illustrative purposes, the Hello Data! web UI displays the raw JSON response for the API token the user entered.
+> For illustrative purposes, the Hello Data! web UI displays the raw JSON response.
 
 #### Listing Watson Data Platform project assets 
 
-To retrieve a project's asset list, call the [`POST /v2/asset_types/asset/search`](https://catalogs-ys1-dev.stage1.mybluemix.net/v2/explorer/#!/Asset_Types/searchNewAssetV2) endpoint, passing the project id as parameter. The request body must contain a JSON string  expressing a Lucene query, such as `{query: "*:*"}`, which should be appropriate for most requests.
+To retrieve a project's asset list, call the `POST /v2/asset_types/asset/search` endpoint, passing the project id as parameter. The JSON request body must  contain the following content
+
+```
+ { 
+   "query": "*:*"
+ }
+```
 
 The JSON response contains asset metadata, such as the asset name (`metadata.name`), asset type (`metadata.asset_type`) and unique asset id (`metadata.asset_id`). Call the appropriate asset type specific API endpoints (see next section) with the desired asset id to collect the information needed to access the data asset.
 
@@ -56,11 +67,6 @@ The JSON response contains asset metadata, such as the asset name (`metadata.nam
 #### Accessing Watson Data Platform data assets 
 
 TODO
-
-### Shallow Watson Data Platform API Wrapper
-The Watson Data Platform provides a [REST API](https://developer.ibm.com/api/view/id-1084:title-Watson_Data_Platform_Core_Services) that applications can use consume its services. This application utilizes a purpose build shallow wrapper library (`/server/lib/client.js`) to communicate with this API. Once an official Node.js SDK is released this wrapper library is obsolete.
-
-The wrapper library encapsulates the HTTP request/response processing (including authentication) but does not contain any business logic.
 
 ### IBM Cloudant data access
 
