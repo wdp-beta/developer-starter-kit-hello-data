@@ -1,16 +1,13 @@
 # Hello Data!
 
-The following steps are prerequisites before using the starter kit applicaiton. Performing them will also give you an understanding of how the WDP experiences represent the structures you will be using the APIs to interact with.
+The following steps are prerequisites before using the starter kit application. Performing them will also give you an understanding of how the WDP experiences represent the structures you will be using the APIs to interact with.
 
 The assumption is that you do not have any previously deployed elements of Watson Data Platform. If you or your organization has already provisioned Watson Data Platform services and you have access to active projects and data sources, you may be able to use this starter kit application without these prerequisite steps. 
-
-
 
 1. <a href="#stepone">Prepare your data sources</a>
 2. <a href="#steptwo">Provision the WDP experiences</a>
 3. <a href="#stepthree">Create a project</a>
 4. <a href="#stepfour">Add your data sources to the project</a>
-
 
 <p>&nbsp;</p>
 <a name="stepone"></a>
@@ -30,7 +27,6 @@ The assumption is that you do not have any previously deployed elements of Watso
     1. Select **Open Dashboard** from the **Actions** menu of the **DB2 Warehouse on Cloud** entry.
     2. From the next page select the Launch action to open the web console.
 
-
 3. Local data file
 
     Download the following file to your local machine: <a href='https://raw.githubusercontent.com/ibm-watson-data-lab/wdp-skit-cookbook/master/SETUP/sample_csv_file.csv' download>sample\_csv\_file.csv</a>.
@@ -45,10 +41,9 @@ The assumption is that you do not have any previously deployed elements of Watso
     If you already have access, log on before continuing.
     1. Sign up for [Data Science Experience](http://datascience.ibm.com/)
 
-
 2. Add Data Catalog
 
-    From Data Science Experience you can add additional applicaitons. Data Catalog is one of these
+    From Data Science Experience you can add additional applications. Data Catalog is one of these.
     1. Click the avatar icon in the upper-right corner ( it displays your initials by default )
     2. From the menu, select **Add Other Apps** and add **Data Catalog**. If this entry does not appear, you already have it deployed.
 
@@ -100,5 +95,5 @@ In this step you will populate the project with the data needed to use this star
     4. Use browse or drag-and-drop to add the .csv file you downloaded earlier to the project.
 
 <p>&nbsp;</p>
-You should now see three data assets in your project and can now explore them using the starter kit application:
+You should now see three data assets in your project and can now explore them using the [starter kit application](https://wdp-beta.github.io/developer-starter-kit-hello-data/about). 
 
