@@ -52,7 +52,7 @@ To list projects, call the `GET /v2/projects` endpoint. The JSON response contai
 
 #### Listing Watson Data Platform project assets 
 
-To retrieve a project's asset list, call the `POST /v2/asset_types/asset/search` endpoint, passing the project id as parameter. The JSON request body must  contain the following content
+To retrieve a project's asset list, call the `POST /v2/asset_types/asset/search` endpoint, passing the project id as parameter. The JSON request body must contain the following content
 
 ```
  { 
@@ -66,7 +66,11 @@ The JSON response contains asset metadata, such as the asset name (`metadata.nam
 
 #### Accessing Watson Data Platform data assets 
 
-TODO
+Projects can contain data assets, such as data source connections (`metadata.asset_type` equals `connection`), files or tables (`metadata.asset_type` is for both `data_asset`). The asset list response includes general asset information but does not include the metadata required to access those assets (e.g. with the intend to access a relational database or download a csv file.) There are dedicated APIs for each one of the asset types.
+
+The `/v2/connections` API provides endpoints that allow for the creation, retrieval, update, deletion of connections and discovery of assets in the data source that a connection points to.
+
+> You can use this API to manage connection assets in projects and catalogs.
 
 ### IBM Cloudant data access
 
