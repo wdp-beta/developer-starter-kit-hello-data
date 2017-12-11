@@ -66,11 +66,15 @@ The JSON response contains asset metadata, such as the asset name (`metadata.nam
 
 #### Accessing Watson Data Platform data assets 
 
-Projects can contain data assets, such as data source connections (`metadata.asset_type` equals `connection`), files or tables (`metadata.asset_type` is for both `data_asset`). The asset list response includes general asset information but does not include the metadata required to access those assets (e.g. with the intend to access a relational database or download a csv file.) There are dedicated APIs for each one of the asset types.
+Projects can contain data assets, such as data source connections (`metadata.asset_type` equals `connection`), files or tables (`metadata.asset_type` is for both `data_asset`). The asset list response includes general asset information but does not include the metadata required to access those assets (e.g. with the intend to access a relational database or download a csv file.) 
 
-The `/v2/connections` API provides endpoints that allow for the creation, retrieval, update, deletion of connections and discovery of assets in the data source that a connection points to.
+The `/v2/assets` API provides endpoints that allow for the creation, retrieval, update and deletion of data assets.
 
-> You can use this API to manage connection assets in projects and catalogs.
+> You can use this API to manage assets in projects and catalogs.
+
+Use the `/v2/connections` API endpoints to create, retrieve, update, delete connections or discovery of assets in the data source that a connection points to.
+
+> You can use the connections API to manage connection assets in projects and catalogs.
 
 ### IBM Cloudant data access
 
